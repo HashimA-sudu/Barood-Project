@@ -8,9 +8,20 @@ public class SwordSwing : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !isSwinging)
+        if (Input.GetButtonDown("Fire1") && !isSwinging)
         {
             StartCoroutine(SwingRoutine());
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(1f); // Set to 1 as requested
+            }
         }
     }
 
@@ -18,7 +29,7 @@ public class SwordSwing : MonoBehaviour
     {
         isSwinging = true;
         Quaternion startRot = transform.localRotation;
-        Quaternion endRot = Quaternion.Euler(0, 0, 90) * startRot; // Swings 90 degrees
+        Quaternion endRot = Quaternion.Euler(90, 0, 0) * startRot; // Swings 90 degrees
 
         float t = 0;
         while (t < 1)
