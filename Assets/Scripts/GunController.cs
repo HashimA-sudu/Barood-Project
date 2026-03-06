@@ -7,7 +7,7 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // Default is Left-Click
+        if (Input.GetButtonDown("Fire1") && (NPCUIManager.Instance == null || !NPCUIManager.Instance.IsMenuBusy() == true)) // Default is Left-Click
         {
             Shoot();
         }

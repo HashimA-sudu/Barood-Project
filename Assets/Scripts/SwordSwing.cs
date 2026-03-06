@@ -8,7 +8,7 @@ public class SwordSwing : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !isSwinging)
+        if (Input.GetButtonDown("Fire1") && !isSwinging && (NPCUIManager.Instance == null || !NPCUIManager.Instance.IsMenuBusy() == true))
         {
             StartCoroutine(SwingRoutine());
         }

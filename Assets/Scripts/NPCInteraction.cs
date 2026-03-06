@@ -1,19 +1,24 @@
 using UnityEngine;
+using System;
 
-public class NPCInteraction : MonoBehaviour, IInteractable
-{
-    public string characterName; // Type "Nasser" or "Merchant" in Inspector
-    [TextArea(3, 10)]
-    public string dialogueText; // Type the message here
+[Serializable]
+public class DialogueNode {
+    public string npcText;
+    public bool isChoice;
+    public string choiceA_Text;
+    public int nextIndexA; // The index of the next node if A is picked
+    public string choiceB_Text;
+    public int nextIndexB; // The index of the next node if B is picked
+}
 
-    public void Interact()
-    {
-        // Tell the Manager to show MY name and MY text
-        NPCUIManager.Instance.DisplayDialogue(characterName, dialogueText);
+public class NPCInteraction : MonoBehaviour, IInteractable {
+    public string characterName;
+    public DialogueNode[] nodes; // You can build the whole tree in the Inspector
+
+    public void Interact() {
+        if (NPCUIManager.Instance != null) {
+            NPCUIManager.Instance.StartDialogue(characterName, nodes);
+        }
     }
-
-    public string GetInteractLabel()
-    {
-        return "Press E to talk to " + characterName; // GDD interaction rule [cite: 280]
-    }
+    public string GetInteractLabel() => "Press E to talk to " + characterName;
 }
