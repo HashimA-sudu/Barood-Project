@@ -1,33 +1,48 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ThirdPersonCamera : MonoBehaviour
+public class FirstPersonCamera : MonoBehaviour
 {
-    public Transform target;        // Drag "CameraTarget" here
-    public float distance = 3.0f;   // How far behind the player
     public float sensitivity = 10f;
+    public Transform playerBody; 
+    public float interactRange = 3f;
     
-    float rotationX = 0;
-    float rotationY = 0;
+    float xRotation = 0f;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        transform.localPosition = new Vector3(0, 0.8f, 0); 
     }
 
-    void LateUpdate() // Use LateUpdate for cameras to prevent jitter
+    void Update()
     {
+        // Camera Rotation
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
-        
-        rotationY += mouseDelta.x * sensitivity * Time.deltaTime;
-        rotationX -= mouseDelta.y * sensitivity * Time.deltaTime;
-        rotationX = Mathf.Clamp(rotationX, -20, 45); // Limit looking up/down
+        xRotation -= mouseDelta.y * sensitivity * Time.deltaTime;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseDelta.x * sensitivity * Time.deltaTime);
 
-        // Calculate rotation and position
-        Quaternion rotation = Quaternion.Euler(rotationX, rotationY, 0);
-        Vector3 position = target.position - (rotation * Vector3.forward * distance);
-
-        transform.rotation = rotation;
-        transform.position = position;
+        // Interact logic
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            // Inside your Update() function in FirstPersonCamera.cs
+if (Keyboard.current.eKey.wasPressedThisFrame)
+{
+    Ray ray = new Ray(transform.position, transform.forward);
+    if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
+    {
+        Debug.Log("I hit: " + hit.collider.name); // ADD THIS LINE
+        if (hit.collider.TryGetComponent(out IInteractable obj))
+        {
+            obj.Interact();
+        }
+    }
+    else {
+        Debug.Log("I hit nothing."); // ADD THIS LINE
+    }
+}
+        }
     }
 }

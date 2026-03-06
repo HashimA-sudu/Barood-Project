@@ -4,48 +4,55 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public Transform cam; // Drag your Main Camera here
-    public float speed = 5f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 8f;
+    public float slideSpeed = 12f;
     public float gravity = -9.81f;
     
+    [Header("Crouch & Slide Settings")]
+    public float crouchHeight = 1f;
+    public float standingHeight = 2f;
+    
     Vector3 velocity;
-    Vector2 moveInput;
+    bool isSprinting;
+    bool isCrouching;
 
     void Update()
     {
-        // 1. Get WASD Input
+        // 1. Inputs
+        isSprinting = Keyboard.current.shiftKey.isPressed;
+        isCrouching = Keyboard.current.leftCtrlKey.isPressed;
+
         float x = (Keyboard.current.dKey.isPressed ? 1f : 0f) - (Keyboard.current.aKey.isPressed ? 1f : 0f);
-        float y = (Keyboard.current.wKey.isPressed ? 1f : 0f) - (Keyboard.current.sKey.isPressed ? 1f : 0f);
-        moveInput = new Vector2(x, y);
+        float z = (Keyboard.current.wKey.isPressed ? 1f : 0f) - (Keyboard.current.sKey.isPressed ? 1f : 0f);
+        Vector3 moveInput = transform.right * x + transform.forward * z;
 
-        // 2. Calculate direction relative to Camera
-        // We take the camera's forward/right and flatten them (remove Y) so we don't walk into the ground
-        Vector3 camForward = cam.forward;
-        Vector3 camRight = cam.right;
-        camForward.y = 0.1f; // Prevent zeroing out forward vector which can cause issues when looking straight up/down
-        camRight.y = 0;
-        camForward.Normalize();
-        camRight.Normalize();
+        float currentSpeed = walkSpeed;
 
-        // This is where 'move' is declared and calculated
-        Vector3 move = camRight * moveInput.x + camForward * moveInput.y;
-
-        // 3. Apply Movement
-        controller.Move(move * speed * Time.deltaTime);
-
-        // 4. Rotation Logic: Make player face where they are walking
-        if (move != Vector3.zero)
+        // 2. Logic: Slide vs Crouch
+        if (isCrouching)
         {
-            transform.forward = move;
+            controller.height = crouchHeight;
+            // Slide if running and actually moving forward
+            if (isSprinting && moveInput.magnitude > 0.1f) currentSpeed = slideSpeed;
+            else currentSpeed = walkSpeed * 0.5f;
+        }
+        else
+        {
+            controller.height = standingHeight;
+            currentSpeed = isSprinting ? runSpeed : walkSpeed;
         }
 
-        // 5. Gravity Logic
+        // 3. Move
+        controller.Move(moveInput * currentSpeed * Time.deltaTime);
+
+        // 4. Jump & Gravity
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && controller.isGrounded)
+            velocity.y = Mathf.Sqrt(2f * -gravity);
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if(controller.isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+        if(controller.isGrounded && velocity.y < 0) velocity.y = -2f;
     }
 }

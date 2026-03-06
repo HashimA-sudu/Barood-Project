@@ -1,0 +1,51 @@
+using UnityEngine;
+
+public class UniversalInteractable : MonoBehaviour, IInteractable
+{
+    public enum InteractionType { NPC, Chest, MissionGiver, Resource }
+    public InteractionType type;
+
+    [Header("NPC Settings")]
+    public string npcName;
+    public string[] dialogue;
+
+    [Header("Mission Settings")]
+    public string destinationLevel; // e.g., "DesertLevel" [cite: 511]
+
+    public void Interact()
+    {
+        switch (type)
+        {
+            case InteractionType.NPC:
+                Debug.Log("Chatting with " + npcName);
+                // Trigger your UI Dialogue System here
+                break;
+
+            case InteractionType.Chest:
+                OpenChest();
+                break;
+
+            case InteractionType.MissionGiver:
+                ShowMissionMenu();
+                break;
+        }
+    }
+
+    void OpenChest()
+    {
+        [cite_start]// Add resources like Gold or Iron to inventory [cite: 369, 371]
+        Debug.Log("Chest Opened!");
+        Destroy(gameObject); // Or play an animation
+    }
+
+    void ShowMissionMenu()
+    {
+        [cite_start]// This should trigger the popup to teleport to the Desert [cite: 522, 538]
+        Debug.Log("Do you want to start mission: " + destinationLevel + "?");
+    }
+
+    public string GetInteractText()
+    {
+        return "Press E to interact with " + gameObject.name;
+    }
+}
