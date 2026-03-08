@@ -24,6 +24,23 @@ public class Projectile : MonoBehaviour
             // If it's a bullet, destroy the bullet on hit
             if (this.gameObject.name.Contains("Bullet")) Destroy(gameObject); 
         }
+        else if (other.CompareTag("Destructible"))
+        {
+            Destructible destructible = other.GetComponent<Destructible>();
+            if (destructible != null)
+            {
+                destructible.TakeDamage(1); // Assuming destructibles take 1 damage per hit
+                Debug.Log("Bullet Hit Destructible!");
+            }
+            
+            // If it's a bullet, destroy the bullet on hit
+            if (this.gameObject.name.Contains("Bullet")) Destroy(gameObject); 
+        }
+         else if (other.CompareTag("Wall"))
+        {
+            // If it's a bullet, destroy the bullet on hit
+            if (this.gameObject.name.Contains("Bullet")) Destroy(gameObject); 
+        }
     }
     void Update()
     {

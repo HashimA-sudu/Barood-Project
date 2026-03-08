@@ -15,6 +15,16 @@ public class SwordBlade : MonoBehaviour
                 enemy.TakeDamage(1f);
                 Debug.Log("Blade Hit!");
             }
+
+        }
+        else if (other.CompareTag("Destructible"))
+        {
+            Destructible crate = other.GetComponent<Destructible>();
+            if(crate != null)
+            {
+                crate.TakeDamage(1);
+                Debug.Log("Blade Hit Destructible!");
+            }
         }
     }
 }

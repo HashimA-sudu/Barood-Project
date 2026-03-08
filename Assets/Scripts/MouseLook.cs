@@ -3,10 +3,11 @@ using UnityEngine.InputSystem;
 
 public class FirstPersonCamera : MonoBehaviour
 {
-    public float sensitivity = 10f;
-    public Transform playerBody; 
     public float interactRange = 3f;
-    
+    public GameObject interactUI;
+
+    public float sensitivity = 10f;
+    public Transform playerBody;     
     float xRotation = 0f;
 
     void Start()
@@ -31,21 +32,21 @@ public class FirstPersonCamera : MonoBehaviour
 
         
         // Interact logic
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        Ray ray = new Ray(transform.position, transform.forward);
+        if(Physics.Raycast(ray, out RaycastHit hit, interactRange))
         {
-            // Inside your Update() function in FirstPersonCamera.cs
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
+            if(hit.collider.TryGetComponent(out IInteractable obj))
             {
-                Debug.Log("I hit: " + hit.collider.name); // ADD THIS LINE
-                if (hit.collider.TryGetComponent(out IInteractable obj))
+                interactUI.SetActive(true);
+                if(UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame)
                 {
                     obj.Interact();
                 }
             }
-}
+        }
+        else
+        {
+            interactUI.SetActive(false);
         }
     }
 }
