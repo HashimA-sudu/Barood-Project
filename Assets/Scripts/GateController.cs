@@ -18,7 +18,7 @@ public class GateController : MonoBehaviour, IInteractable
     if (gateAnimator != null)
     {
         gateAnimator.SetBool("isOpen", isOpen);
-        gateAnimator.SetTrigger("Toggle"); // Optional: Trigger to play an animation
+        gateAnimator.SetTrigger("Toggle");
     }
 }
 }

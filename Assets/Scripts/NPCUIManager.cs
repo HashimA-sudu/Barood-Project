@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.InputSystem; // Required for Left Click detection
-
+using UnityEngine.InputSystem;
 public class NPCUIManager : MonoBehaviour {
     public static NPCUIManager Instance;
     public GameObject menuPanel;
@@ -21,14 +20,12 @@ public class NPCUIManager : MonoBehaviour {
         menuPanel.SetActive(false); 
     }
 
-    // This is the "Master Check" for your Camera and Weapon scripts
     public bool IsMenuBusy() {
         // Returns true if the menu is open OR if it closed less than 0.1 seconds ago
         return isConversationActive || (Time.time - lastClosedTime < 0.1f);
     }
 
     void Update() {
-        // GDD: Simple interaction for the 12-25 age group
         // If the menu is open, NOT showing a choice, and player Left Clicks
         if (isConversationActive && !currentNodes[currentIndex].isChoice && Mouse.current.leftButton.wasPressedThisFrame) {
             AdvanceDialogue();

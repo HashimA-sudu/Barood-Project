@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         // make sure we don't allow movement if the NPC UI is busy
         if (NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true) return;
 
-        // 2. Logic: Slide vs Crouch
+        // 2. Slide vs Crouch
         if (isCrouching)
         {
             controller.height = crouchHeight;

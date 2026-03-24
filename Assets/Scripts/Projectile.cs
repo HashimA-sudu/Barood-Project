@@ -12,13 +12,12 @@ public class Projectile : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        // Inside OnTriggerEnter
         if (other.CompareTag("Enemy"))
         {
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
-                enemy.TakeDamage(1f); // Set to 1 as requested
+                enemy.TakeDamage(1f); // Assuming each bullet does 1 damage
             }
             
             // If it's a bullet, destroy the bullet on hit

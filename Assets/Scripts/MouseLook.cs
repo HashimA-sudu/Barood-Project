@@ -42,7 +42,6 @@ public class FirstPersonCamera : MonoBehaviour
                 interactUI.SetActive(true); 
                 
                 // 2. Update the text (e.g., "Press [E] to Open Gate")
-                // We use the 'ClarifyText' child of your 'ClarifyPrompt'
                     TMPro.TextMeshProUGUI promptText = interactUI.GetComponentInChildren<TMPro.TextMeshProUGUI>();
                     if(promptText != null) promptText.text = obj.GetInteractLabel();
 
