@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - NPC
+  - Destructible
+  - Interactable
   layers:
   - Default
   - TransparentFX

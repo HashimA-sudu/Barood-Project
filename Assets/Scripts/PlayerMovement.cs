@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveInput = transform.right * x + transform.forward * z;
 
         float currentSpeed = walkSpeed;
+        // make sure we don't allow movement if the NPC UI is busy
+        if (NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true) return;
 
         // 2. Logic: Slide vs Crouch
         if (isCrouching)

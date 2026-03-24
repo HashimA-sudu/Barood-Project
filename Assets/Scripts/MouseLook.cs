@@ -32,21 +32,34 @@ public class FirstPersonCamera : MonoBehaviour
 
         
         // Interact logic
-        Ray ray = new Ray(transform.position, transform.forward);
-        if(Physics.Raycast(ray, out RaycastHit hit, interactRange))
+       Ray ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
         {
-            if(hit.collider.TryGetComponent(out IInteractable obj))
+            // Try to find the IInteractable interface on the gate or NPC
+            if (hit.collider.TryGetComponent(out IInteractable obj))
             {
-                interactUI.SetActive(true);
-                if(UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame)
+                // 1. Show the [E] Prompt box
+                interactUI.SetActive(true); 
+                
+                // 2. Update the text (e.g., "Press [E] to Open Gate")
+                // We use the 'ClarifyText' child of your 'ClarifyPrompt'
+                    TMPro.TextMeshProUGUI promptText = interactUI.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+                    if(promptText != null) promptText.text = obj.GetInteractLabel();
+
+                    // 3. Trigger the interaction
+                    if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame)
+                    {
+                        obj.Interact();
+                    }
+                }
+                else
                 {
-                    obj.Interact();
+                    interactUI.SetActive(false); // Not looking at something interactive
                 }
             }
-        }
-        else
-        {
-            interactUI.SetActive(false);
-        }
-    }
+            else
+            {
+                interactUI.SetActive(false); // Too far away
+            }
+            }
 }

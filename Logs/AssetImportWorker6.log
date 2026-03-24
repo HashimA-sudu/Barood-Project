@@ -1,0 +1,546 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.2f1 (a9779f353c9b) revision 11106207'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16022 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nasho's Laptop" at "2026-03-24T08:22:22.0760549Z"
+Date: 2026-03-24T08:22:22Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+C:/Users/Nasho's Laptop/BaroodProject
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+56129
+-licensingIpc
+LicenseClient-Nasho's Laptop
+-job-worker-count
+5
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/Nasho's Laptop/BaroodProject
+C:/Users/Nasho's Laptop/BaroodProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [356]  Target information:
+
+Player connection [356]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3083344250 [EditorId] 3083344250 [Version] 1048832 [Id] WindowsEditor(7,Nashos-Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [356]  * "[IP] 192.168.1.15 [Port] 0 [Flags] 2 [Guid] 3083344250 [EditorId] 3083344250 [Version] 1048832 [Id] WindowsEditor(7,Nashos-Laptop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [356] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [356] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 5.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.2f1 (a9779f353c9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Nasho's Laptop/BaroodProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25a2)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   32.0.15.9174
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003212 seconds.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              68327994dff244c1a8e96dcfe2b21390
+  Correlation Id:          90e71b254ea7352bfe82980d5ebdf5c4
+  External correlation Id: 5146419388763791854
+  Machine Id:              3pMXqMslrahDS7j/dCPXZgJJwOs=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nasho's Laptop" (connect: 0.00s, validation: 0.00s, handshake: 0.89s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nasho's Laptop-notifications" at "2026-03-24T08:22:22.9697898Z"
+[Licensing::Module] Licensing Background thread has ended after 0.89s
+- Loaded All Assemblies, in  0.463 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.429 seconds
+Domain Reload Profiling: 889ms
+	BeginReloadAssembly (168ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (184ms)
+		LoadAssemblies (166ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (178ms)
+				TypeCache.ScanAssembly (161ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (429ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (380ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (52ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (150ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968363785902-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  0.865 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.949 seconds
+Domain Reload Profiling: 1811ms
+	BeginReloadAssembly (189ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (584ms)
+		LoadAssemblies (450ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (237ms)
+			TypeCache.Refresh (180ms)
+				TypeCache.ScanAssembly (164ms)
+			BuildScriptInfoCaches (44ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (950ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (684ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (183ms)
+			ProcessInitializeOnLoadAttributes (405ms)
+			ProcessInitializeOnLoadMethodAttributes (82ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6229 unused Assets / (4.3 MB). Loaded Objects now: 7043.
+Memory consumption went from 148.2 MB to 143.9 MB.
+Total: 8.586100 ms (FindLiveObjects: 0.789000 ms CreateObjectMapping: 0.600700 ms MarkObjects: 5.093200 ms  DeleteObjects: 2.102000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 67921.424794 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/OBJ/Rock_1.obj
+  artifactKey: Guid(d357ecd5fd525e14190a9b2ce6ea1d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/OBJ/Rock_1.obj using Guid(d357ecd5fd525e14190a9b2ce6ea1d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '912e8013abf218153c35f09150cc7db2') in 0.6306998 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.331654 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/BirchTree_3.fbx
+  artifactKey: Guid(8a34c9ff6a8af124f91bc5ec635fe3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/BirchTree_3.fbx using Guid(8a34c9ff6a8af124f91bc5ec635fe3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b57b19a03fc39313e97cdde179877f0c') in 0.0746907 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_3.fbx
+  artifactKey: Guid(d51427ad178293449b2548bcb43a6e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_3.fbx using Guid(d51427ad178293449b2548bcb43a6e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28ebe29dbd771769cc98ed99033eb4b7') in 0.0565399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_6.fbx
+  artifactKey: Guid(49862e5a401c9ef46a13f18eee649876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_6.fbx using Guid(49862e5a401c9ef46a13f18eee649876) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee7e5d7f7654ce5faa4309fcd23a7ad1') in 0.0595572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/BirchTree_4.fbx
+  artifactKey: Guid(c32e16e09324c5f49a61ce04b5d994fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/BirchTree_4.fbx using Guid(c32e16e09324c5f49a61ce04b5d994fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7ff83db6ba4d1815af893b4ac3f930b0') in 0.0523677 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Bush.fbx
+  artifactKey: Guid(67ba2709a7133c64598a65c412c2a1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Bush.fbx using Guid(67ba2709a7133c64598a65c412c2a1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e8915cc966927b4784bb665d0ea146d') in 0.0382788 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_2.fbx
+  artifactKey: Guid(3d1123c730705ff42846ea4e14689b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_2.fbx using Guid(3d1123c730705ff42846ea4e14689b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87b9252d4403f7318a33bd11d188b879') in 0.029298 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_8.fbx
+  artifactKey: Guid(16f37f26c8cfe304d822a69659696dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_8.fbx using Guid(16f37f26c8cfe304d822a69659696dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '003a8dd23faa7f2eac8d99be2a12b159') in 0.0304396 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_1.fbx
+  artifactKey: Guid(d00bbd719a09629439e52eccaaca4a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/DeadTree_1.fbx using Guid(d00bbd719a09629439e52eccaaca4a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9c9fa13dff9a6dde0de8d8faa247288') in 0.0287524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.155022 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/BirchTree_3.blend
+  artifactKey: Guid(81d7a9f4c818cd1488a21d9da9da8b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/BirchTree_3.blend using Guid(81d7a9f4c818cd1488a21d9da9da8b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f4d02bd62f6896382b1b31f5af4c794') in 0.068382 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_6.blend
+  artifactKey: Guid(b1e2f19f016522b4f961ac7b1a749f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_6.blend using Guid(b1e2f19f016522b4f961ac7b1a749f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3db6d889f2f995bee5bf3c972477c176') in 0.0595377 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_5.blend
+  artifactKey: Guid(e47355b800495fb4094f487441c2de7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_5.blend using Guid(e47355b800495fb4094f487441c2de7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '021eb9fbda6333512c5efd3d39799782') in 0.0340633 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_4.blend
+  artifactKey: Guid(ec67e40cc7b1d7b48bdf0383a6f35860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_4.blend using Guid(ec67e40cc7b1d7b48bdf0383a6f35860) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2f04b284d126fef247e0397726370e30') in 0.0393064 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Bush_Small.blend
+  artifactKey: Guid(7c9d5f91fd31b574594b2494a16fad14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Bush_Small.blend using Guid(7c9d5f91fd31b574594b2494a16fad14) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c4d599b83f4b44efa871d5001d859a8') in 0.0291979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_9.blend
+  artifactKey: Guid(a6f28bf8d76c08a4c852c083751dd4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_9.blend using Guid(a6f28bf8d76c08a4c852c083751dd4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0e38071dfcaa0bc338aae25b7a862f11') in 0.0292062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_2.blend
+  artifactKey: Guid(efe14fa2748c10d488743d93f4033a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_2.blend using Guid(efe14fa2748c10d488743d93f4033a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d9d041addabaececa14b3957cb20250') in 0.0290354 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Flower_2_Clump.blend
+  artifactKey: Guid(bbcd35a97808b1642b05d8a41cb8a30e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Flower_2_Clump.blend using Guid(bbcd35a97808b1642b05d8a41cb8a30e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c6ce3760735fa4ccf6418845a08b06f') in 0.0288115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_7.blend
+  artifactKey: Guid(2ec9ca916d9499740a29f7f77bae47c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/DeadTree_7.blend using Guid(2ec9ca916d9499740a29f7f77bae47c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '575d160f0f487fbcb88443b6f271747a') in 0.0282848 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.339682 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Flower_5_Clump.blend
+  artifactKey: Guid(4c2aa25f27dadaf4bbbb89c6106b0ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Flower_5_Clump.blend using Guid(4c2aa25f27dadaf4bbbb89c6106b0ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5cf5b2d40e10ee2dc877170c2f88d49') in 0.0275542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Grass_Large_Extruded.blend
+  artifactKey: Guid(a81a3db4f04534e499a493e5417efa5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Grass_Large_Extruded.blend using Guid(a81a3db4f04534e499a493e5417efa5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e98b241798fc8c8d2630129213dd256e') in 0.0275414 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/MapleTree_4.blend
+  artifactKey: Guid(cb6af9e72ee9d9a4a81d46bcb81f4198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/MapleTree_4.blend using Guid(cb6af9e72ee9d9a4a81d46bcb81f4198) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5542f2094a3ab57ad774c96e90b18a61') in 0.0330561 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Grass_Small.blend
+  artifactKey: Guid(c4f1da853cb9e7344b0ce3e593fa36db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Grass_Small.blend using Guid(c4f1da853cb9e7344b0ce3e593fa36db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb3501fc08a64a8181d32540e49e5537') in 0.0278907 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/NormalTree_4.blend
+  artifactKey: Guid(e773f74390d4e6e46a12b8b0d7f93c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/NormalTree_4.blend using Guid(e773f74390d4e6e46a12b8b0d7f93c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e43237385baf883adf50802b7d96c5a7') in 0.0348623 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/NormalTree_1.blend
+  artifactKey: Guid(5dbb1ffb78e8d244e9b08e4c6e04db2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/NormalTree_1.blend using Guid(5dbb1ffb78e8d244e9b08e4c6e04db2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c22c67ea887f5cb18a91d87c4d312044') in 0.0318233 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056863 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PalmTree_3.blend
+  artifactKey: Guid(d9a27d1234d04b245b9a9c164744d73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PalmTree_3.blend using Guid(d9a27d1234d04b245b9a9c164744d73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5075884932157732337f92ce7fe824cd') in 0.0407388 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PineTree_3.blend
+  artifactKey: Guid(a469aabf284fd7649a759bf2cfbbcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PineTree_3.blend using Guid(a469aabf284fd7649a759bf2cfbbcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7bd3af5033f5acd6e73051adb8e00cbe') in 0.032653 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Petals_2.blend
+  artifactKey: Guid(3988ef891ece7a44cac42c8a5f4a9213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Petals_2.blend using Guid(3988ef891ece7a44cac42c8a5f4a9213) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3690c3d595e3176baa319a649fd4aa7') in 0.0268966 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Plant_Flowers.blend
+  artifactKey: Guid(eb5e26fd36964394681fdab138f6236a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Plant_Flowers.blend using Guid(eb5e26fd36964394681fdab138f6236a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bfecfe10ce8d01bdd126af2102f8c32c') in 0.0264064 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PineTree_2.blend
+  artifactKey: Guid(c143962d3631b8e41ad5af57bdd6dd12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PineTree_2.blend using Guid(c143962d3631b8e41ad5af57bdd6dd12) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '903fda432edab619664c6a04b8b00b9e') in 0.0346968 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PalmTree_4.blend
+  artifactKey: Guid(c6076c1d0e9f1da47a19c9f73ab12a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/PalmTree_4.blend using Guid(c6076c1d0e9f1da47a19c9f73ab12a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72eb71257ca25dfcfee53cd26e498b47') in 0.0323928 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Petals_3.blend
+  artifactKey: Guid(aa3c1f19053061f44baaef0ccf172498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/Blends/Petals_3.blend using Guid(aa3c1f19053061f44baaef0ccf172498) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3b7797cccf8366229f9c300aa316919') in 0.0287102 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.994470 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Flower_5_Clump.fbx
+  artifactKey: Guid(bc238a599a928c140b093b55f39260c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Flower_5_Clump.fbx using Guid(bc238a599a928c140b093b55f39260c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa52e7823a9ff8d39d0654c425ed91f7') in 0.0506457 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/MapleTree_3.fbx
+  artifactKey: Guid(a887630b689a1734d9c600251e2e073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/MapleTree_3.fbx using Guid(a887630b689a1734d9c600251e2e073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '79fc3b95640e09d334f9c6f50ed7aa70') in 0.0695114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/MapleTree_4.fbx
+  artifactKey: Guid(05be8fe8df4374346866ae6394289a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/MapleTree_4.fbx using Guid(05be8fe8df4374346866ae6394289a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5610a07127415e72a2c03d64494a819') in 0.0687558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/NormalTree_4.fbx
+  artifactKey: Guid(a9389f5842976b94da1ff5d701a8686b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/NormalTree_4.fbx using Guid(a9389f5842976b94da1ff5d701a8686b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b38f717a02cf564554f453e809b03043') in 0.0341729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Grass_Large.fbx
+  artifactKey: Guid(0b345cfcec46d48429f7991ec602516a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Grass_Large.fbx using Guid(0b345cfcec46d48429f7991ec602516a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9c90ac592e93d6ba45b1f921a2398225') in 0.0215042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/PalmTree_1.fbx
+  artifactKey: Guid(55071a7cba746a24498d7ea43854037c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/PalmTree_1.fbx using Guid(55071a7cba746a24498d7ea43854037c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd9850f8bb7e6575726868a5a45714e36') in 0.033879 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/PalmTree_4.fbx
+  artifactKey: Guid(2fc6c78af0076ca4ab6eaea796532335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/PalmTree_4.fbx using Guid(2fc6c78af0076ca4ab6eaea796532335) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97239b1cf345506342c72fdbbb5f51eb') in 0.0308541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Petals_3.fbx
+  artifactKey: Guid(930e96bb3be53d74cb0cdca253338ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/FBX/Petals_3.fbx using Guid(930e96bb3be53d74cb0cdca253338ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '03f3c3c2b0191b54347fb1fffdc8f7a5') in 0.0273745 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.228549 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/glTF/NormalTree_Bark_Normal.png
+  artifactKey: Guid(d79801d42c677034bb4f51cf11d5b57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/glTF/NormalTree_Bark_Normal.png using Guid(d79801d42c677034bb4f51cf11d5b57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3f1855682489c28c8765c39c55d5f04') in 0.0348293 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/glTF/PalmTree_Trunk_Normal.png
+  artifactKey: Guid(e0de47906a611084394ce9f7ba8018b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Env. Assets/Non Original/Ultimate Platformer Pack by Quaternius/glTF/PalmTree_Trunk_Normal.png using Guid(e0de47906a611084394ce9f7ba8018b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0fab95c90337ac9c8b64f67dcc65d3a0') in 0.024371 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

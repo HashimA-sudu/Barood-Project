@@ -5,7 +5,6 @@ public class WeaponManager : MonoBehaviour
 {
     public GameObject gun;
     public GameObject sword;
-
     void Start()
     {
         // Start with the Gun active
