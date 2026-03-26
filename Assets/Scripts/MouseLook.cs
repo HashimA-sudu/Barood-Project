@@ -18,8 +18,11 @@ public class FirstPersonCamera : MonoBehaviour
 
     void Update()
     {
-        // Prevent camera movement and interaction during conversations
-        if (NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true)
+        bool isDialogueActive = NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true;
+        bool isGamePaused = PauseMenu.Instance!=null && PauseMenu.Instance.isPaused;
+
+        // Prevent camera movement and interaction during UI elements
+        if (isDialogueActive || isGamePaused)
         {
             return; 
         }

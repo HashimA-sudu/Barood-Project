@@ -13,8 +13,15 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true) return;
+        bool isDialogueActive = NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true;
+        bool isGamePaused = PauseMenu.Instance!=null && PauseMenu.Instance.isPaused;
 
+        // Prevent camera movement and interaction during UI elements
+        if (isDialogueActive || isGamePaused)
+        {
+            return; 
+        }
+        
         if (Keyboard.current.digit1Key.wasPressedThisFrame) SelectWeapon(1);
         if (Keyboard.current.digit2Key.wasPressedThisFrame) SelectWeapon(2);
     }

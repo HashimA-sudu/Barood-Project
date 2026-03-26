@@ -7,7 +7,10 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && (NPCUIManager.Instance == null || !NPCUIManager.Instance.IsMenuBusy() == true)) // Default is Left-Click
+        bool isDialogueActive = NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy() == true;
+        bool isGamePaused = PauseMenu.Instance!=null && PauseMenu.Instance.isPaused;
+
+        if (Input.GetButtonDown("Fire1") && !(isGamePaused || isDialogueActive)) // busy menu/dialogue, dont shoot
         {
             Shoot();
         }

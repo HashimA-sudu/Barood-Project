@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Destructible
   - Interactable
+  - Wall
   layers:
   - Default
   - TransparentFX

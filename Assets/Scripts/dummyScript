@@ -1,0 +1,23 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class CarriageTravel : MonoBehaviour
+{
+    // These functions will be called by your UI Buttons
+    public void TravelToGoldMine()
+    {
+        Time.timeScale = 1f; // Always reset time before loading
+        SceneManager.LoadScene("GoldMine_Level"); 
+    }
+
+    public void TravelToEmptyQuarter()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("EmptyQuarter_Level");
+    }
+
+    public void CancelTravel()
+    {
+        NPCUIManager.Instance.CloseMenu();
+    }
+}
