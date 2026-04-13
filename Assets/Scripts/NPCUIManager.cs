@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using System;
 public class NPCUIManager : MonoBehaviour {
     public static NPCUIManager Instance;
     public GameObject menuPanel;
     public TextMeshProUGUI titleField;
     public TextMeshProUGUI descriptionField;
+    public string currentNPC; // Track which NPC we're talking to, if any
 
     [Header("Choice Buttons")]
     public GameObject choiceButtonsParent; 
@@ -16,6 +18,7 @@ public class NPCUIManager : MonoBehaviour {
     private bool isConversationActive = false;
     private float lastClosedTime; // Tracks when the menu closed
     void Awake() { 
+
         Instance = this; 
         menuPanel.SetActive(false); 
     }
@@ -33,10 +36,13 @@ public class NPCUIManager : MonoBehaviour {
     }
 
     public void StartDialogue(string name, DialogueNode[] nodes) {
+
+        currentNPC = name;
         titleField.text = name;
         currentNodes = nodes;
         currentIndex = 0;
         isConversationActive = true;
+        Console.WriteLine($"Starting dialogue with {name}");
         
         menuPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
@@ -59,7 +65,7 @@ public class NPCUIManager : MonoBehaviour {
     }
 
     // Called by Left Click (for Talk nodes)
-    void AdvanceDialogue() {
+    public void AdvanceDialogue() {
         int next = currentNodes[currentIndex].nextIndexA; // Use Index A as the "Next" path
         
         if (next == -1) {
@@ -79,6 +85,7 @@ public class NPCUIManager : MonoBehaviour {
     }
 
     public void CloseMenu() {
+        currentNPC = null;
         isConversationActive = false;
         lastClosedTime = Time.time; // Mark the exact second it closed
         menuPanel.SetActive(false);

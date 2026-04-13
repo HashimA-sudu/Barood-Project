@@ -1,20 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class CarriageDriver : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-  
     public void TravelToDesertedVillage()
     {
-        SceneManager.LoadScene("DesertedVillage");
-        Time.timeScale = 1f;
+        // 1. Check if the manager is currently talking to the driver
+        // We compare the string directly because currentNPC is a string
+        if (NPCUIManager.Instance.currentNPC == "Bo Nasser (Carriage Driver)")
+        {
+            Time.timeScale = 1f; // Always reset time before loading
+            SceneManager.LoadScene("DesertedVillage");
+        }
+       
     }
 
-    // Update is called once per frame
-   public void CancelTravel()
+    public void CancelTravel()
     {
         NPCUIManager.Instance.CloseMenu();
     }
 }
-
-
