@@ -25,6 +25,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Escape))
         {
+            // If inventory is open, let it close (don't process pause menu)
+            if (InventoryUI.isOpen)
+            {
+                return;
+            }
+            
             if(isPaused) Resume();
             else Pause();
         }   
@@ -34,13 +40,19 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        ControlsManager.SetPauseMenuActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     void Pause()
     {
+        if(InventoryUI.Instance != null && InventoryUI.isOpen)
+        {
+            return; // Don't open pause menu if inventory is open
+        }
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        ControlsManager.SetPauseMenuActive(true);
         Cursor.lockState= CursorLockMode.None;
         Cursor.visible = true;
         isPaused = true;
@@ -48,7 +60,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnToHideout()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1f;
     }
 }

@@ -8,19 +8,30 @@ public class SwordSwing : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !isSwinging && (NPCUIManager.Instance == null || !NPCUIManager.Instance.IsMenuBusy() == true))
+        if (Input.GetButtonDown("Fire1") && !isSwinging && !ControlsManager.AreControlsDisabled())
         {
             StartCoroutine(SwingRoutine());
         }
     }
     void OnTriggerEnter(Collider other)
     {
+        // Check for enemies
         if (other.CompareTag("Enemy"))
         {
             EnemyHealth enemy = other.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
                 enemy.TakeDamage(1f); // Take 1 damage from sword
+            }
+        }
+        
+        // Check for destructibles
+        if (other.CompareTag("Destructible"))
+        {
+            Destructible destructible = other.GetComponent<Destructible>();
+            if (destructible != null)
+            {
+                destructible.TakeDamage(1); // Take 1 damage
             }
         }
     }

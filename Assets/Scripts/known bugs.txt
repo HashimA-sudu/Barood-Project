@@ -1,0 +1,2 @@
+in inventory menu, press esc will pause. supposed to close menu only.
+inventory when picking up weapons it spawns 4 item slots + no name/icons, and all layered up against each other.

@@ -15,10 +15,22 @@ public class InventoryManager : MonoBehaviour
 
     public TMPro.TextMeshProUGUI notificationText;  
 
-    void Awake() { Instance = this; }
+    void Awake() 
+    { 
+        Instance = this;
+        // Clear inventory on start - items must be picked up
+        items.Clear();
+        weapons.Clear();
+    }
 
     public bool AddItem(InventoryItem item)
     {
+        if (item == null)
+        {
+            Debug.LogWarning("InventoryManager: Trying to add null item!");
+            return false;
+        }
+        
         if (item.isWeapon)
         {
             if (weapons.Count >= maxWeapons)
@@ -27,6 +39,7 @@ public class InventoryManager : MonoBehaviour
                 return false;
             }
             weapons.Add(item);
+            ShowNotification($"Picked up {item.itemName}");
             return true;
         }
         else
@@ -37,6 +50,7 @@ public class InventoryManager : MonoBehaviour
                 return false;
             }
             items.Add(item);
+            ShowNotification($"Picked up {item.itemName}");
             return true;
         }
     }
@@ -49,8 +63,15 @@ public class InventoryManager : MonoBehaviour
 
     void ShowNotification(string message)
     {
-        notificationText.text = message;
+        if (notificationText != null)
+        {
+            notificationText.text = message;
+        }
     }
 
-    void HideNotification() { notificationText.text = ""; }
+    void HideNotification() 
+    { 
+        if (notificationText != null)
+            notificationText.text = ""; 
+    }
 }

@@ -42,6 +42,7 @@ public class NPCUIManager : MonoBehaviour {
         currentNodes = nodes;
         currentIndex = 0;
         isConversationActive = true;
+        ControlsManager.SetDialogueActive(true);
         Console.WriteLine($"Starting dialogue with {name}");
         
         menuPanel.SetActive(true);
@@ -87,6 +88,7 @@ public class NPCUIManager : MonoBehaviour {
     public void CloseMenu() {
         currentNPC = null;
         isConversationActive = false;
+        ControlsManager.SetDialogueActive(false);
         lastClosedTime = Time.time; // Mark the exact second it closed
         menuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

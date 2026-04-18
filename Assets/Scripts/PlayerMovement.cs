@@ -26,11 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Master Switch: Stop movement if dialogue or pause menu is active
-        bool isBusy = (NPCUIManager.Instance != null && NPCUIManager.Instance.IsMenuBusy()) || 
-                      (PauseMenu.Instance != null && PauseMenu.Instance.isPaused);
-        
-        if (isBusy) return;
+        // Master Switch: Stop movement if any controls are disabled
+        if (ControlsManager.AreControlsDisabled()) return;
 
         HandleInput();
         MovePlayer();
